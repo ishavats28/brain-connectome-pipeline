@@ -2,7 +2,7 @@
 
 **Functional Network Topology, Community Structure & Robustness Analysis**
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23423753.svg)](https://doi.org/10.5281/zenodo.23423753) [![Release](https://img.shields.io/github/v/release/ishavats28/brain-connectome-pipeline?label=release&color=8b5cf6)](https://github.com/ishavats28/brain-connectome-pipeline/releases/tag/v1.0.0) [![Python](https://img.shields.io/badge/Python-3.10--3.13-38bdf8)](https://github.com/ishavats28/brain-connectome-pipeline/blob/main/pyproject.toml) [![License](https://img.shields.io/github/license/ishavats28/brain-connectome-pipeline?color=2dd4bf)](https://github.com/ishavats28/brain-connectome-pipeline/blob/main/LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23423753.svg)](https://doi.org/10.5281/zenodo.23423753) [![Release](https://img.shields.io/badge/release-v1.0.0-8b5cf6)](https://github.com/ishavats28/brain-connectome-pipeline/releases/tag/v1.0.0) [![Python](https://img.shields.io/badge/Python-3.10--3.13-38bdf8)](https://github.com/ishavats28/brain-connectome-pipeline/blob/main/pyproject.toml) [![License](https://img.shields.io/badge/license-MIT-2dd4bf)](https://github.com/ishavats28/brain-connectome-pipeline/blob/main/LICENSE)
 
 ## Overview and scope
 

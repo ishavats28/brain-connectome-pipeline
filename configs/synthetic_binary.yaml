@@ -1,0 +1,24 @@
+input:
+  source_type: matrix
+  path: ../examples/synthetic_binary.csv
+  matrix_semantics: binary_adjacency
+  embedded_labels: true
+
+graph:
+  enabled: true
+  mode: unthresholded
+  positive_edge_policy: strictly_positive
+  tie_handling: roi_index
+  allow_binary_subsampling: false
+  write_binary: true
+  write_weighted: true
+
+topology: {enabled: false}
+community: {enabled: false}
+density_sensitivity: {enabled: false}
+robustness: {enabled: false}
+reporting: {enabled: false}
+
+outputs:
+  directory: ../outputs/binary_example
+random_seed: 1729

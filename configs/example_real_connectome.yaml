@@ -1,0 +1,66 @@
+# YaleNeuroConnect / OpenNeuro ds007286 v1.0.7, one resting-state Shen268 derivative.
+# Run examples/prepare_yaleneuroconnect_timeseries.py first; the downloaded source
+# table contains a non-ROI observation index and a trailing empty column.
+input:
+  source_type: timeseries
+  path: ../data/real_connectome/sub-vd0116_ses-01_task-rest_run-01_atlas-shen268_cleaned.tsv
+  matrix_semantics: correlation
+  atlas: Shen268
+
+connectivity:
+  estimator: pearson
+  orientation: observations_by_rois
+  minimum_observations: 3
+  constant_tolerance: 1.0e-12
+
+graph:
+  enabled: true
+  mode: proportional
+  target_density: 0.15
+  positive_edge_policy: strictly_positive
+  tie_handling: roi_index
+  allow_binary_subsampling: false
+  write_binary: true
+  write_weighted: true
+
+topology:
+  enabled: true
+  report_largest_component_paths: true
+  eigenvector_max_iterations: 1000
+  eigenvector_tolerance: 1.0e-6
+
+community:
+  enabled: true
+  resolution: 1.0
+  seed: 1729
+  participation_enabled: true
+  hub_enabled: true
+  hub_percentile_threshold: 0.80
+  hub_minimum_metrics: 3
+
+# Modest degree-preserving binary null ensemble for a laptop demonstration.
+smallworld:
+  enabled: true
+  ensemble_size: 3
+  minimum_valid_samples: 2
+  swaps_per_edge: 1
+  maximum_ensemble_attempts: 6
+  seed: 1729
+
+density_sensitivity:
+  enabled: true
+  densities: [0.10, 0.15, 0.20, 0.25, 0.30]
+  plots_enabled: true
+
+robustness:
+  enabled: true
+  ranking_criterion: strength
+  removal_fractions: [0.00, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30]
+  random_trials: 20
+  seed: 1729
+  plots_enabled: true
+
+reporting: {enabled: true}
+outputs:
+  directory: ../results
+random_seed: 1729

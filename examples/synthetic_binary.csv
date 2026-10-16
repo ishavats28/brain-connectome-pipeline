@@ -1,0 +1,5 @@
+roi_id,ROI_A,ROI_B,ROI_C,ROI_D
+ROI_A,0,1,0,0
+ROI_B,1,0,1,0
+ROI_C,0,1,0,0
+ROI_D,0,0,0,0

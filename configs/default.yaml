@@ -1,0 +1,71 @@
+# Unified-run example: topology, communities, density sensitivity, robustness, and reporting.
+input:
+  source_type: matrix
+  path: ../examples/synthetic_correlation.csv
+  matrix_semantics: correlation
+  embedded_labels: true
+  # atlas is intentionally omitted; this example is not tied to a real parcellation.
+
+connectivity:
+  estimator: pearson
+  orientation: observations_by_rois
+  minimum_observations: 3
+  constant_tolerance: 1.0e-12
+
+graph:
+  enabled: true
+  mode: proportional
+  target_density: 0.20
+  positive_edge_policy: strictly_positive
+  tie_handling: roi_index
+  allow_binary_subsampling: false
+  write_binary: true
+  write_weighted: true
+
+# Metrics do not modify either graph representation.
+topology:
+  enabled: true
+  report_largest_component_paths: true
+  eigenvector_max_iterations: 1000
+  eigenvector_tolerance: 1.0e-6
+
+# Louvain communities use retained positive strength, never reciprocal distance.
+community:
+  enabled: true
+  resolution: 1.0
+  seed: 1729
+  participation_enabled: true
+  hub_enabled: true
+  hub_percentile_threshold: 0.80
+  hub_minimum_metrics: 3
+
+# Disabled by default because degree-preserving null ensembles are more expensive.
+smallworld:
+  enabled: false
+  ensemble_size: 10
+  minimum_valid_samples: 5
+  swaps_per_edge: 5
+  maximum_ensemble_attempts: 30
+  seed: 1729
+
+# Independent proportional graphs are rebuilt from the original matrix.
+density_sensitivity:
+  enabled: true
+  densities: [0.10, 0.15, 0.20, 0.25, 0.30]
+  plots_enabled: true
+
+# Perturbations reuse the primary graph configured above.
+robustness:
+  enabled: true
+  ranking_criterion: strength
+  removal_fractions: [0.00, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30]
+  random_trials: 20
+  seed: 1729
+  plots_enabled: true
+
+# The unified run writes a self-contained offline HTML report from computed outputs.
+reporting: {enabled: true}
+
+outputs:
+  directory: ../outputs
+random_seed: 1729

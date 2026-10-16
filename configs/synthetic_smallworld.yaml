@@ -1,0 +1,33 @@
+# Deterministic synthetic graph for exercising the small-world null ensemble.
+input:
+  source_type: matrix
+  path: ../examples/synthetic_smallworld.csv
+  matrix_semantics: binary_adjacency
+
+graph:
+  enabled: true
+  mode: unthresholded
+  positive_edge_policy: strictly_positive
+  tie_handling: roi_index
+  allow_binary_subsampling: false
+  write_binary: true
+  write_weighted: true
+
+topology: {enabled: false}
+community: {enabled: false}
+
+smallworld:
+  enabled: true
+  ensemble_size: 3
+  minimum_valid_samples: 2
+  swaps_per_edge: 1
+  maximum_ensemble_attempts: 12
+  seed: 41
+
+density_sensitivity: {enabled: false}
+robustness: {enabled: false}
+reporting: {enabled: false}
+
+outputs:
+  directory: ../outputs/synthetic_smallworld
+random_seed: 1729

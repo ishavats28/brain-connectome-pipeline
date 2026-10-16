@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata in this file."
+type: software
+title: "Brain Connectome Pipeline: Functional Network Topology, Community Structure & Robustness Analysis"
+abstract: >-
+  A reproducible Python workflow for constructing positive, undirected functional
+  brain graphs from validated connectivity matrices or preprocessed regional time
+  series, and for analyzing topology, community structure, candidate hubs,
+  small-worldness, graph-density sensitivity, and node-removal robustness.
+authors:
+  - given-names: Isha
+    family-names: Vats
+version: 1.0.0
+license: MIT
+keywords:
+  - brain connectomics
+  - functional connectivity
+  - graph theory
+  - network neuroscience
+  - reproducible research

@@ -1,0 +1,21 @@
+# Synthetic ROI time-series example using rows=observations and columns=ROIs.
+input:
+  source_type: timeseries
+  path: ../examples/synthetic_timeseries.csv
+  matrix_semantics: correlation
+
+connectivity:
+  estimator: pearson
+  orientation: observations_by_rois
+  minimum_observations: 3
+
+graph: {enabled: false}
+topology: {enabled: false}
+community: {enabled: false}
+density_sensitivity: {enabled: false}
+robustness: {enabled: false}
+reporting: {enabled: false}
+
+outputs:
+  directory: ../outputs
+random_seed: 1729

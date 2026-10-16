@@ -2,6 +2,8 @@
 
 **Functional Network Topology, Community Structure & Robustness Analysis**
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23423753.svg)](https://doi.org/10.5281/zenodo.23423753) [![Release](https://img.shields.io/github/v/release/ishavats28/brain-connectome-pipeline?label=release&color=8b5cf6)](https://github.com/ishavats28/brain-connectome-pipeline/releases/tag/v1.0.0) [![Python](https://img.shields.io/badge/Python-3.10--3.13-38bdf8)](https://github.com/ishavats28/brain-connectome-pipeline/blob/main/pyproject.toml) [![License](https://img.shields.io/github/license/ishavats28/brain-connectome-pipeline?color=2dd4bf)](https://github.com/ishavats28/brain-connectome-pipeline/blob/main/LICENSE)
+
 ## Overview and scope
 
 Brain Connectome Pipeline is a reproducible Python workflow for graph-theoretic analysis of
@@ -350,9 +352,13 @@ manifest record the effective methods, versions, statuses, warnings, and output 
 
 ## Citation
 
-To cite Brain Connectome Pipeline, use the software metadata in
-[CITATION.cff](CITATION.cff), which identifies Isha Vats as the author and version 1.0.0 as the
-software version. No software DOI is currently assigned.
+Vats, I. (2026). *Brain Connectome Pipeline: Functional Network Topology, Community Structure &
+Robustness Analysis* (Version 1.0.0) [Computer software]. Zenodo.
+<https://doi.org/10.5281/zenodo.23423753>
+
+Machine-readable citation metadata is available in [CITATION.cff](CITATION.cff). The source is in
+the [GitHub repository](https://github.com/ishavats28/brain-connectome-pipeline), with the archived
+code corresponding to the [v1.0.0 release](https://github.com/ishavats28/brain-connectome-pipeline/releases/tag/v1.0.0).
 
 Analyses using the YaleNeuroConnect demonstration data should also cite the source dataset:
 Samardzija et al. (2026), *YaleNeuroConnect*, OpenNeuro `ds007286` version `1.0.7`,

@@ -11,6 +11,10 @@ authors:
   - given-names: Isha
     family-names: Vats
 version: 1.0.0
+doi: 10.5281/zenodo.23423753
+date-released: 2026-10-16
+repository-code: https://github.com/ishavats28/brain-connectome-pipeline
+url: https://github.com/ishavats28/brain-connectome-pipeline
 license: MIT
 keywords:
   - brain connectomics
